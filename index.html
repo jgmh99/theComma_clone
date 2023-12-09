@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/h_f.css">
+    <link rel="stylesheet" href="./css/index.css"> 
+
+</head>
+<body>
+<div class="top_banner">
+    <div class="tb_item">안녕하세요! 프론트엔드 개발자 제갈민혁입니다.</div>
+    <div class="tb_item">The,Comma 클론코딩 사이트 입니다!</div>
+    <div class="tb_item">BEST, NEW, OUTER 페이지 구현했으며, 무한스크롤을 적용하였습니다.</div>
+    <div class="tb_item">예쁘게 봐주세요!</div>
+    <div class="tb_item">감사합니다!</div>
+</div>
+
+<!-- ondragstart : 이미지 드래그 안되게 막기(189.복사방지에 있음) -->
+<div class="layer_popup" ondragstart="return false">
+    <div class="popup_body">
+        <div class="popup_img_box">
+            <a href="#" class="popup_img">
+                <img src="./img/popup/big_img_01.jpg" alt="">
+            </a>
+            <a href="#" class="popup_img">
+                <img src="./img/popup/big_img_02.jpg" alt="">
+            </a>
+            <a href="#" class="popup_img">
+                <img src="./img/popup/big_img_03.jpg" alt="">
+            </a>
+            <a href="#" class="popup_img">
+                <img src="./img/popup/big_img_04.jpg" alt="">
+            </a>
+            <a href="#" class="popup_img">
+                <img src="./img/popup/big_img_05.jpg" alt="">
+            </a>
+            <a href="#" class="popup_img">
+                <img src="./img/popup/big_img_06.jpg" alt="">
+            </a>
+        </div>
+        <div class="popup_btn_box">
+            <div class="popup_btn">
+                <a href="#">세일이벤트</a>
+            </div>
+            <div class="popup_btn">
+                <a href="#">카카오스토리</a>
+            </div>
+            <div class="popup_btn">
+                <a href="#">신상품바로가기</a>
+            </div>
+            <div class="popup_btn">
+                <a href="#">INSTARGRAM<br>인스타그램팔로우</a>
+            </div>
+            <div class="popup_btn">
+                <a href="#">REVIEW<br>구매후기이벤트</a>
+            </div>
+            <div class="popup_btn">
+                <a href="#">JOIN<br>회원가입이벤트</a>
+            </div>
+        </div>
+    </div>
+    <div class="popup_footer">
+        <div class="close_for_today">오늘하루 열지않음</div>
+        <div class="close_popup">닫기</div>
+    </div>
+</div>
+
+<div class="wrap">
+    <div class="header">
+        <div class="h_top">
+            <div class="logo">
+                <a href="index.html">logo</a>
+            </div>
+        </div>
+        <div class="h_bot">
+            <div class="menu">
+                <div class="menu_item">
+                    <a href="product.html?cate_no=0">BEST</a>
+                </div>
+                <div class="menu_item">
+                    <a href="product.html?cate_no=1">NEW 5%</a>
+                </div>
+                <div class="menu_item">
+                    <a href="product.html?cate_no=2">OUTER</a>
+                </div>
+                <div class="menu_item">
+                    <a href="product.html?cate_no=3">TOP</a>
+                </div>
+                <div class="menu_item">
+                    <a href="product.html?cate_no=4">BOTTOM</a>
+                </div>
+                <div class="menu_item">
+                    <a href="product.html?cate_no=5">ACC</a>
+                </div>
+                <div class="menu_item">
+                    <a href="product.html?cate_no=6">BAG&amp;SHOES</a>
+                </div>
+                <div class="pan">
+                    <div class="contents_area">
+                        <div class="pan_item" id="pan1">Best_Item</div>
+                        <div class="pan_item" id="pan2">New_Item</div>
+                        <div class="pan_item" id="pan3">Outer_Item</div>
+                        <div class="pan_item" id="pan4">TOP_Item</div>
+                        <div class="pan_item" id="pan5">Bottom_Item</div>
+                        <div class="pan_item" id="pan6">Acc_Item</div>
+                        <div class="pan_item" id="pan7">Bag&Shoes_Item</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main_banner">
+            <div class="banner banner1"></div>
+            <div class="banner banner2"></div>
+            <div class="banner banner3"></div>
+
+            <div class="btn_slide" id="btn_slide_L"></div>
+            <div class="btn_slide" id="btn_slide_R"></div>
+
+            <div class="indicator">
+
+            </div>
+        </div>
+ 
+        <div class="sec contents_area" id="w_ranking">
+            <div class="sec_head item_init">WEEKLY RANKING</div>
+            <div class="sec_body">
+                <ul class="item_container">
+                    <li class="item w_ranking_item_li item_init">
+                        <div class="item_img">
+                            <img src="./img/items/ranking/1.jpg" alt="">
+                            <div class="ranking_num">1</div>
+                        </div>
+                        <div class="item_info">
+                            <div class="item_desc_title">더콤마</div>
+                            <div class="origin_price"><del>300,000원</del></div>
+                            <div class="sale_price">200,000원</div>
+                            <div class="item_desc">상품에 대한 설명이 표시됩니다</div>
+                        </div>
+                    </li>
+                    <li class="item w_ranking_item_li item_init">
+                        <div class="item_img">
+                            <img src="./img/items/ranking/2.jpg" alt="">
+                            <div class="ranking_num">2</div>
+                        </div>
+                        <div class="item_info">
+                            <div class="item_desc_title">더콤마</div>
+                            <div class="origin_price"><del>300,000원</del></div>
+                            <div class="sale_price">200,000원</div>
+                            <div class="item_desc">상품에 대한 설명이 표시됩니다</div>
+                        </div>
+                    </li>
+                    <li class="item w_ranking_item_li item_init">
+                        <div class="item_img">
+                            <img src="./img/items/ranking/3.jpg" alt="">
+                            <div class="ranking_num">3</div>
+                        </div>
+                        <div class="item_info">
+                            <div class="item_desc_title">더콤마</div>
+                            <div class="origin_price"><del>300,000원</del></div>
+                            <div class="sale_price">200,000원</div>
+                            <div class="item_desc">상품에 대한 설명이 표시됩니다</div>
+                        </div>
+                    </li>
+                    <li class="item w_ranking_item_li item_init">
+                        <div class="item_img">
+                            <img src="./img/items/ranking/4.jpg" alt="">
+                            <div class="ranking_num">4</div>
+                        </div>
+                        <div class="item_info">
+                            <div class="item_desc_title">더콤마</div>
+                            <div class="origin_price"><del>300,000원</del></div>
+                            <div class="sale_price">200,000원</div>
+                            <div class="item_desc">상품에 대한 설명이 표시됩니다</div>
+                        </div>
+                    </li>
+                    <li class="item w_ranking_item_li item_init">
+                        <div class="item_img">
+                            <img src="./img/items/ranking/5.jpg" alt="">
+                            <div class="ranking_num">5</div>
+                        </div>
+                        <div class="item_info">
+                            <div class="item_desc_title">더콤마</div>
+                            <div class="origin_price"><del>300,000원</del></div>
+                            <div class="sale_price">200,000원</div>
+                            <div class="item_desc">상품에 대한 설명이 표시됩니다</div>
+                        </div>
+                    </li>
+                    <li class="item w_ranking_item_li item_init">
+                        <div class="item_img">
+                            <img src="./img/items/ranking/6.jpg" alt="">
+                            <div class="ranking_num">6</div>
+                        </div>
+                        <div class="item_info">
+                            <div class="item_desc_title">더콤마</div>
+                            <div class="origin_price"><del>300,000원</del></div>
+                            <div class="sale_price">200,000원</div>
+                            <div class="item_desc">상품에 대한 설명이 표시됩니다</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+
+        <div class="sec contents_area" id="best">
+            <div class="sec_head item_init">BEST ITEM</div>
+            <div class="sec_body">
+                <ul class="item_container">
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="sec contents_area" id="new">
+            <div class="sec_head  item_init">NEW 5%</div>
+            <div class="sec_body">
+                <ul class="item_container">
+                    
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="footer contents_area"></div>
+    </div>
+
+    <script src="./js/theComma(load_list).js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/index.js"></script>
+</div>
+</body>
+</html>

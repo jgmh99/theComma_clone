@@ -1,9 +1,6 @@
 $(document).ready(function() {
     
-    /*************************************/
-    /*************  메인배너 **************/
-    /*************************************/
-    // css에서 banner0 한테 left:0 주던가 여기서 이거로 주던가
+    //메인배너
     $('.banner').eq(0).css({left: 0});
 
     // 배너 개수에 맞춰서 인디케이터 생성하기
@@ -45,7 +42,6 @@ $(document).ready(function() {
         $('.indi').eq(o_idx).removeClass('indi_active');
         $('.indi').eq(c_idx).addClass('indi_active');
 
-        // curr_idx = c_idx;
     }
 /*
             - 왼쪽버튼 기능 만들기
@@ -106,30 +102,14 @@ $(document).ready(function() {
         let s_bot = s_top + w_height - 300;
 
         if(s_bot >= w_ranking_o_top) { 
-            // for(let i=0; i<$('#w_ranking .item_init').length; i++) {
-            //     setTimeout(function(){
-            //         $('#w_ranking .item_init').eq(i).addClass('item_init_active')
-            //     }, i * 70)
-            // }
             item_slide_up($('#w_ranking .item_init'));
             best_o_top = $('#best').offset().top;
         }
         if(s_bot >= best_o_top) { 
-            // for(let i=0; i<$('#best .item_init').length; i++) {
-            //     setTimeout(function(){
-            //         $('#best .item_init').eq(i).addClass('item_init_active')
-            //     }, i * 70)
-            // }
             item_slide_up($('#best .item_init'));
             new_o_top = $('#new').offset().top;
         }
         if(s_bot >= new_o_top) { 
-            // for(let i=0; i<$('#new .item_init').length; i++) {
-            //     setTimeout(function(){
-            //         $('#new .item_init').eq(i).addClass('item_init_active')
-            //     }, i * 70)
-            // }
-
             item_slide_up($('#new .item_init'));
         }
     });

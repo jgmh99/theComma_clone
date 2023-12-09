@@ -139,7 +139,7 @@ $(document).ready(function(){
         $(this).parent().parent('.opt_item').remove();
 
         console.log(btn_chk)
-        let tmp_idx = $(this).next().val(); // 현재 클릭한 X 다음 요소(몇번째꺼냐 btn_chk = [false, false, false]; )
+        let tmp_idx = $(this).next().val(); // 현재 클릭한 X 다음 요소(몇번째꺼냐? btn_chk = [false, false, false]; )
         btn_chk[tmp_idx] = false;
         console.log(btn_chk)
         
@@ -161,42 +161,42 @@ $(document).ready(function(){
 
 
     // 돋보기 움직임 감지
-    // $(document).on('mousemove', '.big_img', function(event){
-    //     // 부모 영역내 마우스 위치 찾기
-    //     let mouseX = event.pageX - $('.big_img').offset().left;
-    //     let mouseY = event.pageY - $('.big_img').offset().top;
+    $(document).on('mousemove', '.big_img', function(event){
+        // 부모 영역내 마우스 위치 찾기
+        let mouseX = event.pageX - $('.big_img').offset().left;
+        let mouseY = event.pageY - $('.big_img').offset().top;
 
-    //     // 마우스가 돋보기 가운데 오기 하기(transform: translate(-50%, -50%) 나 마찬가지)
-    //     let posx = mouseX - $('.magnifier').width() / 2;
-    //     let posy = mouseY - $('.magnifier').height() / 2;
+        // 마우스가 돋보기 가운데 오기 하기(transform: translate(-50%, -50%) 나 마찬가지)
+        let posx = mouseX - $('.magnifier').width() / 2;
+        let posy = mouseY - $('.magnifier').height() / 2;
 
-    //     // 배경 이미지가 원의 가운데 오게 하기
-    //     let bg_x = -mouseX + $('.magnifier').width() / 2;
-    //     let bg_y = -mouseY + $('.magnifier').height() / 2;
+        // 배경 이미지가 원의 가운데 오게 하기
+        let bg_x = -mouseX + $('.magnifier').width() / 2;
+        let bg_y = -mouseY + $('.magnifier').height() / 2;
         
 
-    //     $('.magnifier').css({
-    //         left: posx,
-    //         top: posy,
+        $('.magnifier').css({
+            left: posx,
+            top: posy,
 
-    //         backgroundPosition: `${bg_x}px ${bg_y}px`,
-    //         backgroundSize: `${$('.big_img').width() }px ${$('.big_img').height() }px`,
-    //     })
+            backgroundPosition: `${bg_x}px ${bg_y}px`,
+            backgroundSize: `${$('.big_img').width() }px ${$('.big_img').height() }px`,
+        })
 
         
-    //     console.log(event.offsetX, event.offsetY) 
-    // });
+        console.log(event.offsetX, event.offsetY) 
+    });
 
     
-    // $(document).on('mouseleave', '.big_img', function(event){
-    //     $('.magnifier').css({
-    //         opacity: 0
-    //     })
-    // });
-    // $(document).on('mouseenter', '.big_img', function(event){
-    //     $('.magnifier').css({
-    //         opacity: 1
-    //     })
-    // });
+    $(document).on('mouseleave', '.big_img', function(event){
+        $('.magnifier').css({
+            opacity: 0
+        })
+    });
+    $(document).on('mouseenter', '.big_img', function(event){
+        $('.magnifier').css({
+            opacity: 1
+        })
+    });
 
 })
